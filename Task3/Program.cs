@@ -11,6 +11,7 @@ namespace Task3
             double result = 0;
             do
             {
+
                 try
                 {
                     Console.WriteLine("Введите действительное число а");
