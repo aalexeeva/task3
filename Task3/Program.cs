@@ -7,12 +7,12 @@ namespace Task3
     {
         static void Main()
         {
-            bool okay; 
+            bool okay;
             do
             {
-                var number = 0;
-                var ok = true;
-                double result = 0;
+                var number = 0; // переменная для числа
+                var ok = true; // переменная для определения корректности ввода
+                double result = 0; // переменная для результата вычислений
                 do
                 {
 
@@ -20,7 +20,7 @@ namespace Task3
                     {
                         WriteLine("Введите действительное число а");
                         number = Convert.ToInt32(ReadLine());
-                        if (number <= -1) result = 1 / Math.Pow(number, 2);
+                        if (number <= -1) result = 1 / Math.Pow(number, 2); // проверка того, в какой диапазон входит число 
                         else if (number > -1 && number < 2) result = Math.Pow(number, 2);
                         else result = 4;
                     }
@@ -35,7 +35,7 @@ namespace Task3
                         ok = false;
                     }
                 } while (!ok);
-                WriteLine("Значение функции в точке {0} равно {1}", number, result);
+                WriteLine("Значение функции в точке {0} равно {1}", number, result); // вывод результата
                 WriteLine("Выйти? y - да/n - нет"); //выход из программы
                 var ans = ReadLine();
                 okay = ans == "y";
